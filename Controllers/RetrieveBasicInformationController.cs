@@ -13,7 +13,7 @@ namespace HNG_STAGE_ZERO_TASK.Controllers
             {
                 email = "akinnuoyet@gmail.com",
                 current_datetime = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
-                github_url = "https://github.com/Takinnuoye5/hng-stage-zer0-task"
+                github_url = "https://github.com/Takinnuoye5/stage-zero-hng-task"
             };
 
             return Ok(response);
