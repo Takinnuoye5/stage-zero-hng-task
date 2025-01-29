@@ -23,7 +23,7 @@ Returns a **JSON response** with the following details.
   "current_datetime": "2025-01-30T09:30:00Z",
   "github_url": "https://github.com/Takinnuoye5/stage-zero-hng-task"
 }
-
+```
 
 ## Additional Links
 
@@ -31,7 +31,7 @@ HNG HireHire csharp Developer | https://hng.tech/hire/csharp-developers
 
 
 
-🏗 Technology Stack
+## 🏗 Technology Stack
 Language: C#
 Framework: ASP.NET Core
 Hosting: Azure / Any Cloud Platform
@@ -39,7 +39,7 @@ Version Control: GitHub
 
 
 
-🖥 Setup Instructions (Run Locally)
+## 🖥 Setup Instructions (Run Locally)
 📌 Prerequisites
 Ensure you have the following installed:
 
@@ -48,7 +48,7 @@ Ensure you have the following installed:
 
 
 
-📂 Clone the Repository
+## 📂 Clone the Repository
 
 ```bash
   git clone https://github.com/Takinnuoye5/stage-zero-hng-task
@@ -94,6 +94,8 @@ Send a GET request to the endpoint.
 💻 Using cURL
 ```bash
 curl -X GET "https://your-app.azurewebsites.net/RetrieveBasicInformation" -H "Accept: application/json"
+```
+
 📜 Documentation
 
 📄 API Documentation Includes:
