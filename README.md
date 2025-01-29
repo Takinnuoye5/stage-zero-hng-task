@@ -50,14 +50,12 @@ Ensure you have the following installed:
 📂 Clone the Repository
 
 ```bash
-
 git clone https://github.com/Takinnuoye5/stage-zero-hng-task
 cd your-repo
 
 
 🚀 Run the API Locally
 ```bash
-
 dotnet restore
 dotnet run
 
@@ -92,7 +90,6 @@ Visit:
 Send a GET request to the endpoint.
 💻 Using cURL
 ```bash
-
 curl -X GET "https://your-app.azurewebsites.net/RetrieveBasicInformation" -H "Accept: application/json"
 📜 Documentation
 
