@@ -26,6 +26,7 @@ Returns a **JSON response** with the following details.
 
 
 ## Additional Links
+
 HNG HireHire csharp Developer | https://hng.tech/hire/csharp-developers
 
 
@@ -52,12 +53,14 @@ Ensure you have the following installed:
 ```bash
   git clone https://github.com/Takinnuoye5/stage-zero-hng-task
   cd your-repo
+```
 
 
 🚀 Run the API Locally
 ```bash
 dotnet restore
 dotnet run
+```
 
 
 The API should now be running at:
