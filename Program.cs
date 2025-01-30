@@ -35,6 +35,7 @@ app.UseCors("AllowAll"); // Apply CORS policy
 
 app.MapControllers();
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080"; // Get PORT from environment or fallback to 8080 for local testing
 
 app.Run($"http://0.0.0.0:{port}");
 
