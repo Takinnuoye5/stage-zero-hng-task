@@ -37,10 +37,12 @@ var port = "7244"; // Set a fixed local port for development
 
 // var port = Environment.GetEnvironmentVariable("PORT") ?? "8080"; // Get PORT from environment or fallback to 8080 for local testing
 
-app.Run($"http://0.0.0.0:{port}");
-
 app.MapGet("/", () =>
 {
     var response = HNG_STAGE_ZERO_TASK.Controllers.RetrieveBasicInformationController.GetBasicInfo();
     return Results.Ok(response);
 });
+
+
+app.Run($"http://0.0.0.0:{port}");
+
