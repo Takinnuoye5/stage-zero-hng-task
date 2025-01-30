@@ -36,7 +36,7 @@ app.UseCors("AllowAll"); // Apply CORS policy
 app.MapControllers();
 
 // Use dynamic port assigned by Railway or fallback to local port for testing
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // Default to 5000 for local testing
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080"; // Default to 5000 for local testing
 app.Run($"http://0.0.0.0:{port}");
 
 app.MapGet("/", () => "App is running!");
