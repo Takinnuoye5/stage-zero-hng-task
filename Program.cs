@@ -35,4 +35,8 @@ app.UseCors("AllowAll"); // Apply CORS policy
 
 app.MapControllers();
 
-app.Run();
+
+var port = "7244"; // Set a fixed local port for development
+app.Run($"https://0.0.0.0:{port}");
+
+app.MapGet("/", () => "App is running!");
