@@ -4,8 +4,6 @@ nixPkgs = ["dotnet-sdk_7"]
 [phases.build]
 cmds = ["dotnet restore", "dotnet publish -c Release -o /app/publish"]
 
-
 [start]
-cmds = ["dotnet /app/publish/HNG_STAGE_ZERO_TASK.dll --urls=http://0.0.0.0:$PORT"]
-
+cmd = "dotnet \"/app/publish/HNG STAGE ZERO TASK.dll\""
 

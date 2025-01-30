@@ -1,1 +1,1 @@
-﻿web: dotnet HNG_STAGE_ZERO_TASK.dll --urls http://0.0.0.0:8080
+﻿web: "dotnet /app/publish/HNG_STAGE_ZERO_TASK.dll --urls=http://0.0.0.0:$PORT"
