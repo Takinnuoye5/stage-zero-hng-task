@@ -9,14 +9,20 @@ namespace HNG_STAGE_ZERO_TASK.Controllers
         [HttpGet]
         public IActionResult GetInfo()
         {
-            var response = new
+            var response = GetBasicInfo();
+            return Ok(response);
+
+        }
+
+        public static object GetBasicInfo()
+        {
+            return new
             {
                 email = "akinnuoyet@gmail.com",
                 current_datetime = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
                 github_url = "https://github.com/Takinnuoye5/stage-zero-hng-task"
             };
-
-            return Ok(response);
+            
         }
     }
     
