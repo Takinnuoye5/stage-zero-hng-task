@@ -24,9 +24,9 @@ if (app.Environment.IsDevelopment())
 }
 
 // Conditionally apply HTTPS redirection based on the environment
-if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
+if (app.Environment.IsDevelopment())
 {
-    app.UseHttpsRedirection(); // Use HTTPS redirection in development/staging only
+    app.UseHttpsRedirection(); // Use HTTPS redirection in development only
 }
 
 app.UseAuthorization();
@@ -35,8 +35,8 @@ app.UseCors("AllowAll"); // Apply CORS policy
 
 app.MapControllers();
 
-
-var port = "7244"; // Set a fixed local port for development
-app.Run($"https://0.0.0.0:{port}");
+// Use dynamic port assigned by Railway or fallback to local port for testing
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // Default to 5000 for local testing
+app.Run($"http://0.0.0.0:{port}");
 
 app.MapGet("/", () => "App is running!");
