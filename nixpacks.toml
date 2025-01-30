@@ -5,4 +5,4 @@ nixPkgs = ["dotnet-sdk_7"]
 cmds = ["dotnet restore", "dotnet publish -c Release -o /app/publish"]
 
 [start]
-cmd = dotnet "/app/publish/HNG STAGE ZERO TASK.dll"
+dotnet "/app/publish/HNG STAGE ZERO TASK.dll"
