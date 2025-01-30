@@ -1,13 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
 
 // Add CORS policy
 builder.Services.AddCors(options =>
@@ -27,7 +23,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Conditionally apply HTTPS redirection based on the environment
+if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
+{
+    app.UseHttpsRedirection(); // Use HTTPS redirection in development/staging only
+}
 
 app.UseAuthorization();
 
